@@ -1,101 +1,280 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Recover Lost Crypto Funds | Free Case Review</title>
-  <meta name="description" content="Free case review for victims of crypto scams. We explain possible recovery options. No upfront fees.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="index,follow" />
+
+  <title>Fraud Case Intake — Connect With Verified Providers</title>
+  <meta name="description" content="Submit your case details and we’ll route your request to relevant verified providers. No guarantees. No upfront fees requested by us." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Fraud Case Intake — Connect With Verified Providers" />
+  <meta property="og:description" content="Submit your case details and we’ll route your request to relevant verified providers. No guarantees." />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Fraud Case Intake",
+    "description":"Lead intake and referral to verified providers. No guarantees.",
+    "inLanguage":"en"
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#101b33;
+      --text:#eaf0ff;
+      --muted:#b8c3e6;
+      --border:rgba(255,255,255,.12);
+      --accent:#5aa7ff;
+      --ok:#7cffc8;
+      --danger:#ff6b6b;
+      --shadow:0 18px 45px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1060px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:var(--text);
+      background:
+        radial-gradient(1200px 650px at 10% -10%, rgba(90,167,255,.35), transparent 60%),
+        radial-gradient(1000px 550px at 90% 0%, rgba(124,255,200,.22), transparent 55%),
+        linear-gradient(180deg, var(--bg), #060a14 70%);
+    }
+    a{color:var(--accent)}
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 64px}
+    header{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      padding:10px 0 18px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px}
+    .dot{
+      width:12px; height:12px; border-radius:999px;
+      background:linear-gradient(135deg,var(--accent),var(--ok));
+      box-shadow:0 0 0 6px rgba(90,167,255,.12);
+    }
+    .pill{
+      border:1px solid var(--border);
+      padding:8px 12px; border-radius:999px;
+      background:rgba(255,255,255,.04);
+      color:var(--muted);
+      font-size:13px;
+      text-align:center;
+    }
+    .grid{display:grid; grid-template-columns:1.1fr .9fr; gap:16px; align-items:start}
+    @media (max-width: 920px){ .grid{grid-template-columns:1fr} }
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+      border-radius:var(--radius);
+      padding:22px;
+    }
+    h1{margin:0 0 10px; font-size:34px; line-height:1.12}
+    .sub{margin:0 0 16px; color:var(--muted); line-height:1.55}
+    .badges{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
+    .badge{
+      display:flex; gap:8px; align-items:center;
+      padding:8px 10px; border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(0,0,0,.16);
+      font-size:13px; color:var(--muted);
+    }
+    .badge b{color:var(--text)}
+    h2{margin:0 0 10px; font-size:18px}
+    .list{margin:0; padding-left:18px; color:var(--muted); line-height:1.65}
+    .list li{margin:6px 0}
+
+    .note{
+      margin-top:14px;
+      border:1px dashed rgba(124,255,200,.45);
+      background:rgba(124,255,200,.08);
+      padding:12px 12px;
+      border-radius:14px;
+      color:rgba(234,240,255,.8);
+      font-size:13px;
+      line-height:1.5;
+    }
+    .warn{
+      margin-top:14px;
+      border:1px dashed rgba(255,107,107,.55);
+      background:rgba(255,107,107,.08);
+      padding:12px 12px;
+      border-radius:14px;
+      color:rgba(234,240,255,.82);
+      font-size:13px;
+      line-height:1.5;
+    }
+
+    form{display:flex; flex-direction:column; gap:10px; margin-top:10px}
+    label{font-size:13px; color:var(--muted)}
+    input, textarea, select{
+      width:100%;
+      background:rgba(0,0,0,.18);
+      border:1px solid var(--border);
+      color:var(--text);
+      border-radius:12px;
+      padding:12px 12px;
+      font:inherit;
+      outline:none;
+    }
+    textarea{min-height:96px; resize:vertical}
+    .row{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+    @media (max-width: 560px){ .row{grid-template-columns:1fr} }
+
+    .btn{
+      appearance:none; border:0; cursor:pointer;
+      padding:12px 14px; border-radius:12px;
+      font-weight:800; letter-spacing:.2px;
+      background:linear-gradient(135deg,var(--accent),#3a7cff);
+      color:#061126;
+    }
+    .fine{color:rgba(234,240,255,.7); font-size:12px; line-height:1.5; margin:6px 0 0}
+    .hr{height:1px; background:var(--border); margin:16px 0}
+
+    footer{
+      margin-top:20px;
+      color:rgba(234,240,255,.62);
+      font-size:12px;
+      line-height:1.6;
+    }
+    .links{display:flex; gap:12px; flex-wrap:wrap; margin-top:8px}
+  </style>
 </head>
 
 <body>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background: #f7f7f7;
-    color: #222;
-    margin: 0;
-    padding: 0;
-  }
-  .container {
-    max-width: 800px;
-    margin: 40px auto;
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  }
-  h1, h2 {
-    color: #111;
-  }
-  ul {
-    margin-left: 20px;
-  }
-  .cta {
-    margin-top: 30px;
-    padding: 20px;
-    background: #eef6ff;
-    border-left: 4px solid #2b6cb0;
-  }
-  input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 15px;
-  }
-  button {
-    background: #2b6cb0;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-  }
-</style>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Fraud Case Intake</span>
+      </div>
+      <div class="pill">Referral intake • No guarantees</div>
+    </header>
 
-<div class="container">
-<h1>Recover Lost Crypto Funds</h1>
+    <div class="grid">
+      <section class="card">
+        <h1>Submit a case — we’ll route it to relevant providers</h1>
+        <p class="sub">
+          Tell us what happened and how to contact you. We review the request and, if appropriate,
+          forward it to a verified provider (e.g., legal, compliance, cybersecurity, dispute/chargeback support).
+        </p>
 
-<p>
-Lost money due to a crypto scam?  
-We provide a free initial case review and explain possible recovery steps.
-</p>
+        <div class="badges" role="list">
+          <div class="badge" role="listitem">✅ <b>Fast intake</b> — 2–3 minutes</div>
+          <div class="badge" role="listitem">🧾 <b>Evidence tips</b> included</div>
+          <div class="badge" role="listitem">🔎 <b>Referral only</b> (we’re not a bank)</div>
+          <div class="badge" role="listitem">🔒 <b>Consent-based</b> forwarding</div>
+        </div>
 
-<h2>What happened?</h2>
+        <div class="hr"></div>
 
-<p>
-Many victims lose funds through fake investment platforms, fraudulent brokers,
-or crypto recovery scams.
-</p>
+        <h2>What happens next</h2>
+        <ul class="list">
+          <li>We check your request for completeness.</li>
+          <li>If it matches a provider’s scope, we forward the request to them.</li>
+          <li>The provider may contact you directly. You decide whether to proceed.</li>
+        </ul>
 
-<p>
-Our goal is to analyze your situation and explain whether recovery options may exist.
-</p>
+        <div class="warn">
+          <b>Important:</b> We do not guarantee any outcome. Never share seed phrases/private keys.
+          If anyone demands an upfront “recovery fee” or asks for remote access — treat it as a red flag.
+        </div>
 
-<h2>Who this service is for</h2>
+        <div class="note">
+          <b>Disclosure:</b> We may receive a referral fee from partners if you engage their services.
+          This does not increase what you pay to us (we don’t bill you on this page).
+        </div>
+      </section>
 
-<ul>
-  <li>Victims of crypto investment scams</li>
-  <li>Fake trading platforms</li>
-  <li>Fraudulent brokers</li>
-</ul>
+      <aside class="card" id="form">
+        <h2>Request form</h2>
+        <p class="sub" style="margin-top:-2px">Fill in the details. You can keep it short.</p>
 
-<h2>Free Case Review</h2>
+        <!-- Netlify Forms -->
+        <form name="case-intake" method="POST" data-netlify="true" action="/success.html">
+          <input type="hidden" name="form-name" value="case-intake" />
 
-<form>
-  <p>
-    Describe what happened and how much you lost.
-    Leave your contact (email or Telegram).
-  </p>
+          <div class="row">
+            <div>
+              <label for="category">Category</label>
+              <select id="category" name="category" required>
+                <option value="" selected disabled>Select one</option>
+                <option>Online investment / trading dispute</option>
+                <option>Unauthorized transactions</option>
+                <option>Account compromise / phishing</option>
+                <option>Platform dispute / non-delivery</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="loss">Approx loss (USD)</label>
+              <input id="loss" name="loss" type="text" inputmode="numeric" placeholder="e.g., 2500" />
+            </div>
+          </div>
 
-  <input type="text" placeholder="Approximate loss amount (USD)"><br><br>
-  <input type="text" placeholder="Your contact (Email or Telegram)"><br><br>
-  <button type="submit">Request Free Review</button>
-</form>
+          <label for="details">Short description</label>
+          <textarea id="details" name="details" required placeholder="What happened? Where? Any platform name/URL? (Do NOT include seed phrases/private keys)"></textarea>
 
-<p style="font-size:12px;color:gray;margin-top:30px;">
-This website does not provide financial services.  
-No guarantees of fund recovery are made.
-</p>
-</div>
+          <div class="row">
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="name@example.com" />
+            </div>
+            <div>
+              <label for="messenger">Messenger (optional)</label>
+              <input id="messenger" name="messenger" type="text" placeholder="Telegram/WhatsApp handle (optional)" />
+            </div>
+          </div>
+
+          <label>
+            <input type="checkbox" name="consent" required style="width:auto; margin-right:8px">
+            I agree that my request may be forwarded to a relevant third-party provider for follow-up.
+          </label>
+
+          <button class="btn" type="submit">Submit request</button>
+
+          <p class="fine">
+            We do not provide financial services, and we do not guarantee any recovery or outcome.
+            Do not send sensitive wallet secrets (seed phrase/private keys).
+          </p>
+        </form>
+
+        <div class="hr"></div>
+
+        <h2>Evidence checklist (copy/paste)</h2>
+        <ul class="list">
+          <li>Transaction hashes / receipts</li>
+          <li>Chat logs + usernames</li>
+          <li>URLs + screenshots</li>
+          <li>Timeline of events</li>
+        </ul>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="hr"></div>
+      <div class="links">
+        <a href="#form">Form</a>
+        <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">Back to top</a>
+      </div>
+      <p>
+        <b>Disclaimer:</b> This website is an intake/referral page only. It does not provide legal advice,
+        financial services, or guaranteed outcomes. Partner engagement is optional and subject to their terms.
+      </p>
+      <p>
+        <b>Privacy:</b> We use your contact details to process and forward your request (with consent).
+      </p>
+    </footer>
+  </div>
 </body>
 </html>
